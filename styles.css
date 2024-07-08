@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Dosis;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Kod för navbaren längst upp på sidan*/
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; 
+    color: rgb(236, 236, 236);
+    padding: 1px 100px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.top-navbar-left {
+    display: flex;
+    gap: 25px;
+}
+
+.top-navbar-right {
+    display: flex;
+    gap: 25px;
+}
+
+.top-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Kod för main menu*/
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 30px 280px;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    gap: 25px;
+    text-transform: uppercase;
+}
+
+.menu-left a, .menu-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo img {
+    height: 40px; 
+}
