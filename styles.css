@@ -1,7 +1,10 @@
-body {
+body, html {
     margin: 0;
-    font-family: Dosis;
-    font-weight: 400;
+    padding: 0;
+    font-family: Dosis, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
 }
 
 header {
@@ -9,7 +12,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*Kod för navbaren längst upp på sidan*/
+/************** Kod för navbaren längst upp på sidan **************/
 
 .top-navbar {
     display: flex;
@@ -37,14 +40,14 @@ header {
     color: white;
 }
 
-/*Kod för main menu*/
+/************** Kod för main menu **************/
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 30px 280px;
+    padding: 30px 80px;
 }
 
 .menu-left, .menu-right {
@@ -61,3 +64,157 @@ header {
 .logo img {
     height: 40px; 
 }
+
+/************** Kod för grid med bild och beskrivning **************/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 100%;
+    height: 50vh; /* Halva höjden av viewporten */
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Säkerställer att bilden täcker hela kolumnen */
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+    width: 100%; /* Tar hela bredden av den högra kolumnen */
+}
+
+.news {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.inStock {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.product-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.product-name {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.choose-size {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.size {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+
+.size button {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 1px solid #818181;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Dosis, sans-serif;
+    font-weight: 600;
+}
+
+.size button:hover {
+    background-color: #3c3c3c;
+}
+
+.add-to-cart {
+    margin: 10px auto;
+    padding: 12px 8px;
+    text-transform: uppercase;
+    background-color: #333;
+    color: #ffffff;
+    font-family: Dosis, sans-serif;
+    font-size: 16px;
+    width: 60%;
+    text-align: center;
+}
+
+.article-number {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #acacac;
+}
+
+hr {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.accordion {
+    color: #9b9b9b;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-family: Dosis, sans-serif;
+    background-color: #ececec;
+}
+
+.accordion.active {
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; 
+    font-weight: 600;
+}
+
