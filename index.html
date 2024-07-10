@@ -6,8 +6,8 @@
     <title>Hacket</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -39,11 +39,82 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div>
-            hej
+    <main>
+        <div class="grid-container">
+            <div class="grid-item image-item">
+                <img src="main.png" alt="Product Image">
+            </div>
+            <div class="grid-item description">
+                <div class="news">Nyhet</div>
+                <div class="inStock">Finns i lager</div>
+                <div class="product-details">
+                    <div class="product-logo"><img src="Hackett.png" alt="Logotyp"></div>
+                    <p class="product-name">Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                    <p class="price">999 kr</p>
+                    <p class="choose-size">Välj storlek</p>
+                    <div class="size">
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                    </div>
+                    <button class="add-to-cart">Lägg i varukorg</button>
+                    <p class="article-number">Artikelnummer: Här ska JS in</p>
+                    <hr>
+                </div>
+                <button class="accordion">Produktbeskrivning</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <hr>
+                <button class="accordion">Storlek & passform</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <hr>
+                <button class="accordion">Tvätt & skötselråd</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <hr>
+                <button class="accordion">Leverans & retur</button>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <hr>
+            </div>
         </div>
-    </section>
+        <section>
 
+        </section>
+    </main>
+
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        // Loop through all accordions to close any open panel
+        for (var j = 0; j < acc.length; j++) {
+            var panel = acc[j].nextElementSibling;
+            if (acc[j] !== this) { // Skip the accordion that was clicked
+                acc[j].classList.remove("active");
+                panel.style.maxHeight = null;
+            }
+        }
+
+        // Toggle the selected accordion panel
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+    </script>
+    
+    
 </body>
 </html>
