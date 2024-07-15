@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; 
+    background-color: #000; 
     color: rgb(236, 236, 236);
     padding: 1px 100px;
     font-size: 10px;
@@ -106,7 +106,7 @@ header {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: #333;
+    background-color: #000;
     color: white;
     padding: 5px 10px;
     font-size: 20px;
@@ -117,7 +117,7 @@ header {
     position: absolute;
     top: 2px;
     right: 0px;
-    color: #333;
+    color: #000;
     padding: 5px 10px;
     font-size: 14px;
     text-transform: uppercase;
@@ -162,14 +162,14 @@ header {
 }
 
 .size button:hover {
-    background-color: #3c3c3c;
+    background-color: #000;
 }
 
 .add-to-cart {
     margin: 10px auto;
     padding: 12px 8px;
     text-transform: uppercase;
-    background-color: #333;
+    background-color: #000;
     color: #ffffff;
     font-family: Dosis, sans-serif;
     font-size: 16px;
@@ -205,7 +205,7 @@ hr {
 }
 
 .accordion.active {
-    color: #333;
+    color: #000;
     font-weight: 500;
     padding-bottom: 20px;
 }
@@ -235,7 +235,7 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #000;
     color: white;
     padding: 3px 18px;
     font-size: 16px;
@@ -284,7 +284,7 @@ hr {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 60px;
+    padding: 120px 60px;
 }
 
 .half-width {
@@ -297,16 +297,15 @@ hr {
     text-align: center;
     position: relative;
     flex: 1; 
-    margin: 0px; 
+    margin: 0px 0px 30px 0px; 
     padding: 0; 
 
 }
 
 .product img {
     width: 100%;
-    height: auto;
-    margin: 0; 
-    padding: 0; 
+    height: 100%; 
+    object-fit: cover;
 }
 
 .product p {
@@ -317,7 +316,7 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #000;
     color: white;
     padding: 3px 18px;
     font-size: 16px;
@@ -354,7 +353,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #333;
+    background-color: #000;
     color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -365,9 +364,9 @@ button {
 .socials button {
     padding: 10px 20px;
     font-size: 14px;
-    border: 2px solid #333;
+    border: 2px solid #000;
     background-color: #e4e4e4;
-    color: #333;
+    color: #000;
     cursor: pointer;
     transition: 0.3s;
     font-family: Dosis, sans-serif;
