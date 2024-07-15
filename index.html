@@ -35,7 +35,7 @@
             <div class="menu-right">
                 <a href="#">Sök</a>
                 <a href="#">Lista</a>
-                <a href="#">Kundkorg</a>
+                <a href="#">Kundkorg<span id="cart-counter" class="cart-counter" style="display:none;">(0)</span></a>            
             </div>
         </nav>
     </header>
@@ -53,9 +53,9 @@
                     <p class="price">999 kr</p>
                     <p class="choose-size">Välj storlek</p>
                     <div class="size">
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
                     </div>
                     <button class="add-to-cart">Lägg i varukorg</button>
                     <p class="article-number">Artikelnummer: Här ska JS in</p>
@@ -96,22 +96,32 @@
             <div class="box product">
                 <div class="product-label">Nyhet</div>
                 <img src="SS16_HM401415_951_01_thumb.png" alt="Produkt 1">
-                <p>Hackett London</p>
+                <h3>Hackett London</h3>
+                <p>Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                <p class="products-price">999 kr</p>
             </div>
             <div class="box product">
                 <div class="product-label">Kampanj</div>
                 <img src="SS16_HM441696_869_01_thumb.png" alt="Produkt 2">
-                <p>Hackett London</p>
-            </div>
+                <h3>Hackett London</h3>
+                <p>Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                <p class="products-price"><span style="text-decoration: line-through; font-weight: 500;">999 kr</span><span style="color: rgb(206, 0, 0);">  799 kr</span></p>            </div>
             <div class="box product">
                 <img src="SS16_HM401400_561_01_thumb.png" alt="Produkt 3">
-                <p>Hackett London</p>
+                <h3>Hackett London</h3>
+                <p>Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                <p class="products-price">999 kr</p>
             </div>
             <div class="box product">
                 <img src="SS16_HM550478_595_01_thumb.png" alt="Produkt 4">
-                <p>Hackett London</p>
+                <h3>Hackett London</h3>
+                <p>Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                <p class="products-price">999 kr</p>
             </div>
         </div>
+    </section>
+
+    <section class="content-section">
         <div class="flex-row background-image">
             <div class="box half-width">
                 <h3>Få det senaste</h3>
@@ -192,26 +202,45 @@
 
 
 
-
-
-
-
-
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sizeButtons = document.querySelectorAll('.size button');
+            var addToCartButton = document.querySelector('.add-to-cart');
+            var cartCounter = document.getElementById('cart-counter');
+            var cartCount = 0;
+
+            sizeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    sizeButtons.forEach(function(btn) {
+                        btn.classList.remove('selected');
+                    });
+                    button.classList.add('selected');
+                });
+            });
+
+            addToCartButton.addEventListener('click', function() {
+                if (document.querySelector('.size button.selected')) {
+                    cartCount++;
+                    cartCounter.textContent = ' (' + cartCount + ')';
+                    cartCounter.style.display = 'inline';
+                } else {
+                    alert('Vänligen välj en storlek först.');
+                }
+            });
+        });
+
         var acc = document.getElementsByClassName("accordion");
 
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
-                // Loop through all accordions to close any open panel
                 for (var j = 0; j < acc.length; j++) {
                     var panel = acc[j].nextElementSibling;
-                    if (acc[j] !== this) { // Skip the accordion that was clicked
+                    if (acc[j] !== this) {
                         acc[j].classList.remove("active");
                         panel.style.maxHeight = null;
                     }
                 }
 
-                // Toggle the selected accordion panel
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
                 if (panel.style.maxHeight) {
