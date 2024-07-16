@@ -461,3 +461,104 @@ footer hr {
     border: none;
 }
 
+@media (max-width: 768px) {
+
+    .top-navbar {
+       display: none;
+    }
+
+    .logo {
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .product-logo img {
+        margin-top: 30px;    
+    }
+
+    .menu {
+        padding: 10px 0px;
+    }
+
+    .menu-left, .menu-right {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: 2fr;
+    }
+
+    .box right-align {
+        display: none;
+    }
+
+    .seAll {
+        display: none;
+    }
+
+    .product img {
+        height: 70%;
+        width: 100%;
+    }
+
+    .product-label {
+        display: none;
+    }
+
+    .product h3 {
+        display: none;
+    }
+    
+    .products-price {
+        font-size: 18px !important; 
+        font-weight: 900 !important;
+        color: #000 !important;
+    }
+
+    .product p {
+        font-size: 14px;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+
+    .newsletter {
+        width: 50%;
+    }
+
+
+    footer {
+        padding: 40px;
+        margin-bottom: 0px;
+    }
+    
+    footer .flex-row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2px;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    footer ul {
+        margin-bottom: 0px;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    footer p {
+        text-align: left;
+        padding: 10px 0px;
+    }
+}
+
