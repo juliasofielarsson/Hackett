@@ -464,7 +464,23 @@ footer hr {
 @media (max-width: 768px) {
 
     .top-navbar {
-       display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000; 
+        color: rgb(236, 236, 236);
+        padding: 10px 0px;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .top-navbar-left {
+        display: none;
+    }
+
+    .top-navbar-right {
+        padding: 0px;
+        gap: 40px;
     }
 
     .logo {
@@ -480,10 +496,22 @@ footer hr {
     }
 
     .menu {
-        padding: 10px 0px;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        padding: 15px 10px;
     }
 
-    .menu-left, .menu-right {
+    .menu-left {
+        display: none;
+    }
+
+    .menu-right {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .search, .list {
         display: none;
     }
 
@@ -502,6 +530,10 @@ footer hr {
     .product img {
         height: 70%;
         width: 100%;
+    }
+
+    .news {
+        font-size: 15px;
     }
 
     .product-label {
@@ -528,7 +560,12 @@ footer hr {
         gap: 2px;
     }
 
+    .socials-section {
+        display: none;
+    }
+
     .newsletter {
+        display: none;
         width: 50%;
     }
 
