@@ -50,6 +50,11 @@ header {
     padding: 30px 80px;
 }
 
+.menu-section {
+    display: flex;
+    align-items: center;
+}
+
 .menu-left, .menu-right {
     display: flex;
     gap: 25px;
@@ -60,6 +65,7 @@ header {
     text-decoration: none;
     color: black;
 }
+
 
 .logo img {
     height: 40px; 
@@ -72,6 +78,10 @@ header {
 .cart-counter {
     color: #000;
     font-size: 16px;
+}
+
+.fa-shopping-cart {
+    padding-top: 3px;
 }
 
 
@@ -372,7 +382,7 @@ form {
 }
 
 input[type="email"] {
-    padding: 8px;
+    padding: 8px 90px 8px 8px;
     font-size: 16px;
     border: none;
     outline: none;
@@ -461,6 +471,12 @@ footer hr {
     border: none;
 }
 
+@media (min-width: 769px) {
+    .menu .fa-bars {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
 
     .top-navbar {
@@ -483,12 +499,14 @@ footer hr {
         gap: 40px;
     }
 
+    .menu .fa-bars {
+        display: block;
+        margin-right: 20px;
+        font-size: 24px;
+    }
+
     .logo {
-        height: 100%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+        display: none;
     }
 
     .product-logo img {
@@ -497,8 +515,6 @@ footer hr {
 
     .menu {
         display: flex;
-        justify-content: right;
-        align-items: right;
         padding: 15px 10px;
     }
 
@@ -560,15 +576,11 @@ footer hr {
         gap: 2px;
     }
 
-    .socials-section {
-        display: none;
+    .flex-row.background-image {
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column; 
     }
-
-    .newsletter {
-        display: none;
-        width: 50%;
-    }
-
 
     footer {
         padding: 40px;
