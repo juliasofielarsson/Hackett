@@ -382,7 +382,7 @@ form {
 }
 
 input[type="email"] {
-    padding: 8px 90px 8px 8px;
+    padding: 8px 30px 8px 8px;
     font-size: 16px;
     border: none;
     outline: none;
@@ -429,11 +429,17 @@ button {
     padding: 20px 0px;
 }
 
+.newsletter h3 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 500;
+}
+
 footer {
     background-color: #000000;
     margin-bottom: 0px;
     color: #ffffff;
-    padding: 50px 150px;
+    padding: 10% 10%;
 }
 
 footer h3 {
@@ -471,13 +477,13 @@ footer hr {
     border: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 791px) {
     .menu .fa-bars {
         display: none;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 790px) {
 
     .top-navbar {
         display: flex;
@@ -515,7 +521,7 @@ footer hr {
 
     .menu {
         display: flex;
-        padding: 15px 10px;
+        padding: 15px 20px;
     }
 
     .menu-left {
@@ -608,6 +614,10 @@ footer hr {
     footer p {
         text-align: left;
         padding: 10px 0px;
+    }
+
+    input[type="email"] {
+        padding: 8px 60px 8px 8px;
     }
 }
 
