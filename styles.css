@@ -305,7 +305,7 @@ hr {
 }
 
 .flex-row.background-image {
-    background-image: url('newsletter_bg.png'); 
+    background-image: url('images/newsletter_bg.png'); 
     background-size: cover;
     background-position: center;
     color: #ffffff;
