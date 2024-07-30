@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacket</title>
+
+    <!-- Länkar till css-fil, google fonts och font awesome -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +61,7 @@
                     <div class="product-logo">
                         <img src="images/Hackett.png" alt="Logotyp">
                     </div>
-                    <p class="product-name">Hacket Garment Dyed Oxford Slim <br> Fit Shirt White</p>
+                    <p class="product-name">Hackett Garment Dyed Oxford Slim <br> Fit Shirt White</p>
                     <p class="price">999 kr</p>
                     <p class="choose-size">Välj storlek</p>
                     <div class="size">
@@ -138,7 +140,7 @@
                     <p>Join our mailing list to stay up to date on new arrivals, <br> promotions and all things.</p>
                 </div>
                 <div class="box half-width email-form">
-                    <form action="/submit-email" method="POST">
+                    <form>
                         <div class="input-container">
                             <input type="email" id="email" name="email" placeholder="E-postadress" required>
                             <button type="submit">Skicka</button>
@@ -209,8 +211,7 @@
         <p style="text-transform: uppercase;">Viström Webb AB <span>&copy;</span> 2017. Alla rättigheter reserverade</p>
     </footer>
 
-    <!-- Javascript nedan -->
-
+    <!-- Javascript nedan. Accordion från www.w3schools.com -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var sizeButtons = document.querySelectorAll('.size button');
@@ -233,7 +234,7 @@
                     cartCounter.textContent = ' (' + cartCount + ')';
                     cartCounter.style.display = 'inline';
                 } else {
-                    alert('Vänligen välj en storlek först.');
+                    alert('Välj en storlek först.');
                 }
             });
         });
@@ -260,7 +261,5 @@
             });
         }
     </script>
-    
-    
 </body>
 </html>
